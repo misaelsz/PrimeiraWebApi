@@ -27,6 +27,13 @@ namespace apiCrud.bo.negocio
             }
         }
 
+        public static pessoa ListarPorNome (String nome){
+            using (var context = new ApiCrudEntity()) {
+                var pessoaBanco = context.pessoa.Where(x => x.nome == nome).FirstOrDefault();
+                return pessoaBanco;
+            }
+        }
+
         public static bool AddPessoa(pessoa p)
         {
             using (var context = new ApiCrudEntity()) {
@@ -37,16 +44,12 @@ namespace apiCrud.bo.negocio
             }
         }
 
-        public static pessoa EditaPessoa(Guid id, pessoa p)
+        public static void EditaPessoa(Guid id, pessoa p)
         {
             using (var context = new ApiCrudEntity())
             {
-                var pessoaBanco = context.pessoa.Where(x => x.id == id).FirstOrDefault();
-                context.pessoa.Remove(pessoaBanco);
+                context.Entry(p).State = System.Data.Entity.EntityState.Modified;
                 context.SaveChanges();
-                context.pessoa.Add(p);
-                context.SaveChanges();
-                return p;
 
             }
         }

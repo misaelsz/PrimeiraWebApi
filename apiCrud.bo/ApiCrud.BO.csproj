@@ -61,6 +61,14 @@
     <Compile Include="Migrations\201801292326334_AddCampoEndereco.Designer.cs">
       <DependentUpon>201801292326334_AddCampoEndereco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802011454261_exclusaoCampoEndereco.cs" />
+    <Compile Include="Migrations\201802011454261_exclusaoCampoEndereco.Designer.cs">
+      <DependentUpon>201802011454261_exclusaoCampoEndereco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802011507154_exclusaoCampoEscolaridadeSexo.cs" />
+    <Compile Include="Migrations\201802011507154_exclusaoCampoEscolaridadeSexo.Designer.cs">
+      <DependentUpon>201802011507154_exclusaoCampoEscolaridadeSexo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="negocio\PessoaNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +83,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801292326334_AddCampoEndereco.resx">
       <DependentUpon>201801292326334_AddCampoEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802011454261_exclusaoCampoEndereco.resx">
+      <DependentUpon>201802011454261_exclusaoCampoEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802011507154_exclusaoCampoEscolaridadeSexo.resx">
+      <DependentUpon>201802011507154_exclusaoCampoEscolaridadeSexo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

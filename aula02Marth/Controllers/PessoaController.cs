@@ -40,6 +40,19 @@ namespace aula02Marth.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
             }
         }
+        [HttpGet]
+        public HttpResponseMessage GetPessoas(string nome)
+        {
+            try
+            {
+
+                return Request.CreateResponse(HttpStatusCode.OK, PessoaNegocio.ListarPorNome(nome));
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
 
         // POST: api/Pessoa
         public HttpResponseMessage Post([FromBody]pessoa value)

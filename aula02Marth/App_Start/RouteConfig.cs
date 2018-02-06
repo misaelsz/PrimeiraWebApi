@@ -18,6 +18,12 @@ namespace aula02Marth
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "GetPessoas",
+                url: "{controller}/{action}/{nome}",
+                defaults: new { controller = "Home", action = "Index", nome = UrlParameter.Optional }
+            );
         }
     }
 }

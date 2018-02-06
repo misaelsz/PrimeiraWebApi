@@ -24,6 +24,10 @@ namespace apiCrud.bo.Banco
         public string telefone { get; set; }
 
         [StringLength(50)]
-        public string endereco { get; set; }
+        public string Escolaridade { get; set; }
+
+        [StringLength(50)]
+        public string Sexo { get; set; }
+
     }
 }
