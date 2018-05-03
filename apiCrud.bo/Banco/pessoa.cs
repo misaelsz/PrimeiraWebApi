@@ -15,16 +15,22 @@ namespace apiCrud.bo.Banco
         public string nome { get; set; }
 
         [StringLength(50)]
-        public string email { get; set; }
-
-        [StringLength(50)]
-        public string senha { get; set; }
-
-        [StringLength(50)]
         public string telefone { get; set; }
 
         [StringLength(50)]
-        public string Escolaridade { get; set; }
+        public string Nascimento { get; set; }
+
+        [StringLength(50)]
+        public string CPF { get; set; }
+
+        [StringLength(50)]
+        public string email { get; set; }
+
+        [StringLength(50)]
+        public string RG { get; set; }
+
+        [StringLength(50)]
+        public string Cep { get; set; }
 
         [StringLength(50)]
         public string Sexo { get; set; }
